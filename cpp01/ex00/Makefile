@@ -5,17 +5,17 @@
 #                                                     +:+ +:+         +:+      #
 #    By: lwee <lwee@student.42adel.org.au>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/06/11 19:14:24 by lwee              #+#    #+#              #
-#    Updated: 2023/06/11 19:14:24 by lwee             ###   ########.fr        #
+#    Created: 2023/06/11 19:09:51 by lwee              #+#    #+#              #
+#    Updated: 2023/06/11 19:09:51 by lwee             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= AwesomePhonebook
+NAME	= zombie
 
 CC		= g++
 CFLAGS	= -Werror -Wextra -Wall -std=c++98
 
-SRC		= main.cpp Contact.cpp PhoneBook.cpp
+SRC		= main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 OBJ		= $(SRC:.cpp=.o)
 
 all: $(NAME)

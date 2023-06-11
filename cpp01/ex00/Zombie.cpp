@@ -10,14 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <iostream>
+#include "Zombie.h"
 
-Zombie::Zombie(const std::string& name) : name(name) {}
+Zombie::Zombie(std::string name) : name(name) {}
 
 Zombie::~Zombie() {
-    std::cout << "Zombie " << name << " destroyed." << std::endl;
+    std::cout << "Destroying zombie " << this->name << std::endl;
 }
 
 void Zombie::announce() {
-    std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+    std::cout << this->name << ": BraiiiiiiinnnzzzZ...\n";
 }
