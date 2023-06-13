@@ -12,8 +12,8 @@
 
 #include "Zombie.h"
 
-int main() {
-    Zombie* z = newZombie("Foo");
+int main(void) {
+    Zombie *z = newZombie("Foo");
     z->announce();
 
     randomChump("Bar");

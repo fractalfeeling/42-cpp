@@ -10,13 +10,13 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= zombie
+NAME    = zombie
 
-CC		= g++
-CFLAGS	= -Werror -Wextra -Wall -std=c++98
+CC      = g++
+CFLAGS  = -Werror -Wextra -Wall -std=c++98
 
-SRC		= main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
-OBJ		= $(SRC:.cpp=.o)
+SRC     = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+OBJ     = $(SRC:.cpp=.o)
 
 all: $(NAME)
 

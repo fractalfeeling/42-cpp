@@ -10,15 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "Zombie.h"
+#include <iostream>
 
-Zombie::Zombie(std::string name) : name(name) {}
-
-Zombie::~Zombie() {
-    std::cout << "Destroying zombie " << this->name << std::endl;
+Zombie::Zombie(void)
+{
+    std::cout << "A zombie appeared!" << std::endl;
 }
 
-void Zombie::announce() {
-    std::cout << this->name << ": BraiiiiiiinnnzzzZ...\n";
+Zombie::Zombie(std::string name) : _name(name)
+{
+    std::cout << "A zombie named " << _name << " appeared!" << std::endl;
+}
+
+Zombie::~Zombie(void)
+{
+    std::cout << _name << " has died!" << std::endl;
+}
+
+void Zombie::announce(void)
+{
+    std::cout << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
