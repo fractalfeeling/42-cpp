@@ -5,18 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: lwee <lwee@student.42adel.org.au>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/06/11 19:17:35 by lwee              #+#    #+#              #
-#    Updated: 2023/06/11 19:17:35 by lwee             ###   ########.fr        #
+#    Created: 2023/06/11 19:09:51 by lwee              #+#    #+#              #
+#    Updated: 2023/06/11 19:09:51 by lwee             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= zombie
+NAME    = ZombieHorde
 
-CC		= g++
-CFLAGS	= -Werror -Wextra -Wall -std=c++98
+CC      = g++
+CFLAGS  = -Werror -Wextra -Wall -std=c++98
 
-SRC		= main.cpp Zombie.cpp zombieHorde.cpp
-OBJ		= $(SRC:.cpp=.o)
+SRC     = main.cpp Zombie.cpp zombieHorde.cpp
+OBJ     = $(SRC:.cpp=.o)
 
 all: $(NAME)
 
