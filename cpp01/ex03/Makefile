@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME    = Attack
+NAME    = HumanAttack
 
 CC      = g++
 CFLAGS  = -Werror -Wextra -Wall -std=c++98
@@ -23,7 +23,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $@
 
-%.o: %.cpp
+%.o: %.cpp *.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

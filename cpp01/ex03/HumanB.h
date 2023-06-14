@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   HumanB.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lwee <lwee@student.42adel.org.au>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/14 00:39:46 by lwee              #+#    #+#             */
-/*   Updated: 2023/06/14 00:39:46 by lwee             ###   ########.fr       */
+/*   Created: 2023/06/14 18:54:39 by lwee              #+#    #+#             */
+/*   Updated: 2023/06/14 18:54:39 by lwee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.h"
 
-Weapon::Weapon(std::string type) : _type(type) {}
-
-Weapon::~Weapon() {}
-
-const std::string&  Weapon::getType()
+class HumanB
 {
-    return _type;
-}
+    private:
+        std::string _name;
+        Weapon*     _weapon;
+    
+    public:
+        HumanB(std::string name);
+        ~HumanB();
 
-void    Weapon::setType(std::string type)
-{
-    _type = type;
-}
+        void    setWeapon(Weapon& weapon);
+        void    attack() const;
+};
