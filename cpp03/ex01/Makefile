@@ -15,7 +15,7 @@ NAME    = a.out
 CC      = g++
 CFLAGS  = -Werror -Wextra -Wall -std=c++98
 
-SRC     = main.cpp bsp.cpp Fixed.cpp Point.cpp
+SRC     = main.cpp ClapTrap.cpp ScavTrap.cpp
 OBJ     = $(SRC:.cpp=.o)
 
 all: $(NAME)
@@ -23,7 +23,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $@
 
-%.o: %.cpp *.h
+%.o: %.cpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

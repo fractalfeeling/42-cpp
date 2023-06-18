@@ -53,6 +53,7 @@ ClapTrap&   ClapTrap::operator=(const ClapTrap& source)
         this->_hitPoints = source._hitPoints;
         this->_energyPoints = source._energyPoints;
         this->_attackDamage = source._attackDamage;
+        std::cout << "ClapTrap " << this->_name << " is assigned!" << std::endl;
     }
     return *this;
 }
