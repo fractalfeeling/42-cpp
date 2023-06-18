@@ -10,11 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main(void)
 {   
+	{
+		DiamondTrap diamond("D14M0NDTR4P");
+
+		diamond.attack("Handsome Jack");
+		diamond.takeDamage(6);
+		diamond.beRepaired(4);
+		diamond.takeDamage(3);
+		diamond.guardGate();
+		diamond.highFivesGuys();
+		diamond.whoAmI();
+		diamond.beRepaired(8);
+		diamond.takeDamage(17);
+	}
+	std::cout << "----------------------------------------" << std::endl;
 	{
 		FragTrap frag("FR4GTR4P");
 
@@ -26,6 +39,7 @@ int main(void)
 		frag.beRepaired(8);
 		frag.takeDamage(17);
 	}
+	std::cout << "----------------------------------------" << std::endl;
 	{
 		ScavTrap scav("SC4VTR4P");
 
@@ -37,6 +51,7 @@ int main(void)
 		scav.beRepaired(8);
 		scav.takeDamage(17);
 	}
+	std::cout << "----------------------------------------" << std::endl;
 	{
 		ClapTrap clap("CL4PTR4P");
 

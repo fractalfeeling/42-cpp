@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef CLAPTRAP_HPP
+#define CLAPTRAP_HPP
+
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(std::string name) : 
@@ -78,3 +81,5 @@ void    ClapTrap::beRepaired(unsigned int amount)
         this->_hitPoints = 10;
     this->_energyPoints -= 1;
 }
+
+#endif
