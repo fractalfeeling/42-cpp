@@ -14,7 +14,7 @@
 
 int main(void)
 {   
-    ScavTrap ash( "Ash" );
+    ScavTrap ash = ScavTrap("Ash");
     ScavTrap ash2( ash );
 
     ash.attack( "the air" );
