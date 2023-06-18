@@ -21,6 +21,7 @@ private:
     int         _attackDamage;
 
 public:
+    ClapTrap();
     ClapTrap(std::string name);
     ~ClapTrap();
 

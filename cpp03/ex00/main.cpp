@@ -13,9 +13,10 @@
 #include "ClapTrap.hpp"
 
 int main(void)
-{
-    ClapTrap claptrap("Fizz");
-    claptrap.attack("Buzz");
+{   
+    ClapTrap claptrap1;
+    ClapTrap claptrap2("Fizz");
+    claptrap2.attack("Buzz");
 
     return 0;
 }
