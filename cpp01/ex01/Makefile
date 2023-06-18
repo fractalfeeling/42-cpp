@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME    = ZombieHorde
+NAME    = a.out
 
 CC      = g++
 CFLAGS  = -Werror -Wextra -Wall -std=c++98
