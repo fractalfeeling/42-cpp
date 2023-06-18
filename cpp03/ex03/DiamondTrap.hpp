@@ -22,7 +22,7 @@ public:
     DiamondTrap(std::string name);
     ~DiamondTrap();
 
-    using   ScavTrap::attack(const std::string& target);
+    using   ScavTrap::attack(const std::string& target) const;
 };
 
 #endif
