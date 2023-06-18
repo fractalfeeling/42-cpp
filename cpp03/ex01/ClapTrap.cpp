@@ -34,14 +34,14 @@ ClapTrap::ClapTrap(std::string name) :
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << "ClapTrap " << this->_name << " is destructed!" << std::endl;
+    std::cout << "ClapTrap " << this->_name << " has been destructed!" << std::endl;
     return ;
 }
 
 ClapTrap::ClapTrap(const ClapTrap& source)
 {
     *this = source;
-    std::cout << "ClapTrap copy constructor called." << std::endl;
+    std::cout << "ClapTrap " << this->_name << " has been copied with the copy constructor." << std::endl;
     return ;
 }
 
@@ -53,7 +53,7 @@ ClapTrap&   ClapTrap::operator=(const ClapTrap& source)
         this->_hitPoints = source._hitPoints;
         this->_energyPoints = source._energyPoints;
         this->_attackDamage = source._attackDamage;
-        std::cout << "ClapTrap " << this->_name << " is assigned!" << std::endl;
+        std::cout << "ClapTrap " << this->_name << " has been copied with copy assignment operator." << std::endl;
     }
     return *this;
 }

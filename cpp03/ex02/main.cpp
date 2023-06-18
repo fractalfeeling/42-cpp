@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lwee <lwee@student.42adel.org.au>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/18 19:05:01 by lwee              #+#    #+#             */
-/*   Updated: 2023/06/18 19:05:01 by lwee             ###   ########.fr       */
+/*   Created: 2023/06/18 18:29:42 by lwee              #+#    #+#             */
+/*   Updated: 2023/06/18 18:29:42 by lwee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-#define SCAVTRAP_HPP
+#include "FragTrap.hpp"
 
-#include "ClapTrap.hpp"
+int main(void)
+{   
+    FragTrap frag("FR4GTR4P");
 
-class ScavTrap : public ClapTrap
-{
-public:
-    ScavTrap();
-    ScavTrap(std::string name);
-    ~ScavTrap();
-
-    void    attack(const std::string& target);
-    void    guardGate();
-};
-
-#endif
+    frag.attack("Handsome Jack");
+    frag.takeDamage(6);
+    frag.beRepaired(4);
+    frag.takeDamage(3);
+    frag.highFivesGuys();
+    frag.beRepaired(8);
+    frag.takeDamage(17);
+}
