@@ -19,7 +19,7 @@ ScavTrap::ScavTrap() : ClapTrap()
     this->_energyPoints = 50;
     this->_attackDamage = 20;
 
-    std::cout << "Default ScavTrap is built!" << std::endl;
+    std::cout << "Default ScavTrap is constructed!" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
@@ -28,7 +28,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
     this->_energyPoints = 50;
     this->_attackDamage = 20;
 
-    std::cout << "ScavTrap " << _name << " is built!" << std::endl;
+    std::cout << "ScavTrap " << _name << " is constructed!" << std::endl;
 }
 
 ScavTrap::~ScavTrap()

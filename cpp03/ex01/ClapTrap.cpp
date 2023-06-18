@@ -18,7 +18,7 @@ ClapTrap::ClapTrap() :
     _energyPoints(10),
     _attackDamage(0)
 {
-    std::cout << "Default ClapTrap is built!" << std::endl;
+    std::cout << "Default ClapTrap is constructed!" << std::endl;
     return ;
 }
 
@@ -28,13 +28,13 @@ ClapTrap::ClapTrap(std::string name) :
     _energyPoints(10),
     _attackDamage(0)
 {
-    std::cout << "ClapTrap " << this->_name << " is built!" << std::endl;
+    std::cout << "ClapTrap " << this->_name << " is constructed!" << std::endl;
     return ;
 }
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << "ClapTrap " << this->_name << " is destroyed!" << std::endl;
+    std::cout << "ClapTrap " << this->_name << " is destructed!" << std::endl;
     return ;
 }
 
