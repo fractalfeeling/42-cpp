@@ -14,13 +14,13 @@
 
 int main(void)
 {   
-    ScavTrap ash = ScavTrap("Ash");
-    ScavTrap ash2( ash );
+    ScavTrap scav1 = ScavTrap("Fizz");
+    ScavTrap scav2 = ScavTrap(scav1);
 
-    ash.attack( "the air" );
-    ash.takeDamage( 10 );
-    ash.beRepaired( 10 );
-    ash.guardGate();
+    scav2.attack("the air");
+    scav2.takeDamage(10);
+    scav2.beRepaired(10);
+    scav2.guardGate();
 
     return 0;
 }
