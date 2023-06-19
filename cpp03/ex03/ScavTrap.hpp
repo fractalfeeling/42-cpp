@@ -9,12 +9,13 @@
 /*   Updated: 2023/06/18 19:05:01 by lwee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #ifndef SCAVTRAP_HPP
 #define SCAVTRAP_HPP
 
 #include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap
+class ScavTrap : virtual public ClapTrap
 {
 public:
     ScavTrap(std::string name);

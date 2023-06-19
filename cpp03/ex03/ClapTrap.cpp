@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-#define CLAPTRAP_HPP
-
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(std::string name) : 
@@ -22,20 +19,17 @@ ClapTrap::ClapTrap(std::string name) :
     _attackDamage(0)
 {
     std::cout << "ClapTrap " << this->_name << " is constructed!" << std::endl;
-    return ;
 }
 
 ClapTrap::~ClapTrap()
 {
     std::cout << "ClapTrap " << this->_name << " has been destructed!" << std::endl;
-    return ;
 }
 
 ClapTrap::ClapTrap(const ClapTrap& source)
 {
     *this = source;
     std::cout << "ClapTrap " << this->_name << " has been copied with the copy constructor." << std::endl;
-    return ;
 }
 
 ClapTrap&   ClapTrap::operator=(const ClapTrap& source)
@@ -81,5 +75,3 @@ void    ClapTrap::beRepaired(unsigned int amount)
         this->_hitPoints = 10;
     this->_energyPoints -= 1;
 }
-
-#endif

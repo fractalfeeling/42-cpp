@@ -13,7 +13,7 @@
 NAME    = a.out
 
 CC      = g++
-CFLAGS  = -Werror -Wextra -Wall -std=c++98
+CFLAGS  = -Werror -Wextra -Wall -std=c++98 -Wshadow -Wno-shadow
 
 SRC     = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 OBJ     = $(SRC:.cpp=.o)

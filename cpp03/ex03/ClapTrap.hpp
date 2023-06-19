@@ -9,6 +9,8 @@
 /*   Updated: 2023/06/18 17:52:08 by lwee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#ifndef CLAPTRAP_HPP
+#define CLAPTRAP_HPP
 
 #include <iostream>
 
@@ -31,3 +33,5 @@ public:
     void    takeDamage(unsigned int amount);
     void    beRepaired(unsigned int amount);
 };
+
+#endif
