@@ -25,6 +25,7 @@ public:
 private:
     Contact contacts[8];
     int contactCount;
+    int oldestContactIndex;
 
     std::string truncateText(const std::string& text, std::string::size_type width) const;
 };

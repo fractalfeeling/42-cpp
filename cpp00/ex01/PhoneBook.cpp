@@ -6,7 +6,7 @@
 /*   By: lwee <lwee@student.42adel.org.au>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 00:03:27 by lwee              #+#    #+#             */
-/*   Updated: 2023/06/07 00:03:27 by lwee             ###   ########.fr       */
+/*   Updated: 2023/06/19 16:07:59 by lwee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 
 PhoneBook::PhoneBook() {
     contactCount = 0;
+    oldestContactIndex = 0;
     // Initialize contacts with empty Contact objects
     for (int i = 0; i < 8; i++) {
         contacts[i] = Contact("", "", "", "", "");
@@ -80,7 +81,9 @@ void PhoneBook::addContact() {
         contacts[contactCount] = newContact;
         contactCount++;
     } else {
-        contacts[0] = newContact;
+        // replace the oldest contact
+        contacts[oldestContactIndex] = newContact;
+        oldestContactIndex = (oldestContactIndex + 1) % 8;
     }
 
     std::cout << "Contact added successfully!" << std::endl;
