@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.h                                           :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lwee <lwee@student.42adel.org.au>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/14 00:44:05 by lwee              #+#    #+#             */
-/*   Updated: 2023/06/14 00:44:05 by lwee             ###   ########.fr       */
+/*   Created: 2023/06/19 21:39:05 by lwee              #+#    #+#             */
+/*   Updated: 2023/06/19 21:39:05 by lwee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_H
-#define HUMANA_H
+#ifndef WRONGCAT_H
+#define WRONGCAT_H
 
-#include "Weapon.h"
+#include "WrongAnimal.hpp"
 
-class HumanA
-{
-    private:
-        std::string _name;
-        Weapon&     _weapon;
-    
-    public:
-        HumanA(std::string name, Weapon& weapon);
-        ~HumanA();
-        
-        void    attack() const;
+class WrongCat : public WrongAnimal {
+public:
+    WrongCat();
+    WrongCat(const WrongCat& other);
+    WrongCat& operator=(const WrongCat& other);
+    ~WrongCat();
+
+    void makeSound() const;
 };
 
 #endif

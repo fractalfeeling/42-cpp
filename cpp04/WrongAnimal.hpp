@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.h                                           :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lwee <lwee@student.42adel.org.au>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/14 00:44:05 by lwee              #+#    #+#             */
-/*   Updated: 2023/06/14 00:44:05 by lwee             ###   ########.fr       */
+/*   Created: 2023/06/19 21:25:31 by lwee              #+#    #+#             */
+/*   Updated: 2023/06/19 21:25:31 by lwee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_H
-#define HUMANA_H
+#ifndef WRONGANIMAL_HPP
+#define WRONGANIMAL_HPP
 
-#include "Weapon.h"
+#include <iostream>
+#include <string>
 
-class HumanA
-{
-    private:
-        std::string _name;
-        Weapon&     _weapon;
-    
-    public:
-        HumanA(std::string name, Weapon& weapon);
-        ~HumanA();
-        
-        void    attack() const;
+class WrongAnimal {
+public:
+    WrongAnimal();
+    WrongAnimal(const WrongAnimal& other);
+    WrongAnimal& operator=(const WrongAnimal& other);
+    ~WrongAnimal();
+
+    std::string getType() const;
+    void makeSound() const;
+
+protected:
+    std::string _type;
 };
 
 #endif

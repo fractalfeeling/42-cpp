@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef HUMANB_H
+#define HUMANB_H
+
 #include "Weapon.h"
 
 class HumanB
@@ -25,3 +28,5 @@ class HumanB
         void    setWeapon(Weapon& weapon);
         void    attack() const;
 };
+
+#endif
