@@ -10,39 +10,28 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
 
-int main()
-{
-    const int animalCount = 10;  // Total count of animals
+int main() {
+    const Animal* j = new Dog();
+    const Animal* i = new Cat();
+    std::cout << std::endl;
 
-    // Dynamically allocate an array of Animal pointers
-    Animal** animals = new Animal*[animalCount];
+    delete j;//should not create a leak
+    delete i;
+    std::cout << std::endl;
 
-    // Half of the array will be Dog objects and the other half will be Cat objects
-    for (int i = 0; i < animalCount; ++i) {
-        if (i < animalCount / 2) {
-            animals[i] = new Dog();
-        } else {
-            animals[i] = new Cat();
-        }
+    Dog basic;
+    {
+        Dog tmp = basic;
     }
-
-    // Perform a deep copy test
-    Dog originalDog;
-    Dog copiedDog = originalDog;  // Copy constructor should be called here
-    copiedDog.getBrain()->setIdea(0, "Copied Dog Idea");  // Should not modify originalDog's idea
-
-    // Loop over the array and delete every Animal
-    for (int i = 0; i < animalCount; ++i) {
+    std::cout << std::endl;
+    
+    const Animal* animals[4] = { new Dog(), new Dog(), new Cat(), new Cat() };
+    for ( int i = 0; i < 4; i++ ) {
         delete animals[i];
     }
 
-    // Delete the array itself
-    delete[] animals;
-
-    // No memory leak should occur, and the appropriate destructors should be called in the expected order
     return 0;
 }

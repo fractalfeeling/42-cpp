@@ -14,7 +14,9 @@
 #define ANIMAL_HPP
 
 #include <iostream>
-#include "Brain.hpp"
+#include <string>
+
+class Brain;
 
 class Animal {
 public:

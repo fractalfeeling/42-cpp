@@ -11,15 +11,16 @@
 /* ************************************************************************** */
 
 #include "Cat.hpp"
+#include "Brain.hpp"
 
 Cat::Cat() : Animal() {
     _type = "Cat";
     _brain = new Brain();
-    std::cout << "Default Cat created" << std::endl;
+    std::cout << "Cat default constructor called." << std::endl;
 }
 
 Cat::Cat(const Cat& other) : Animal(other), _brain(new Brain(*other._brain)) {
-    std::cout << "Copy Cat created" << std::endl;
+    std::cout << "Cat copy constructor called." << std::endl;
 }
 
 Cat& Cat::operator=(const Cat& other) {
@@ -28,13 +29,13 @@ Cat& Cat::operator=(const Cat& other) {
         delete _brain;
         _brain = new Brain(*other._brain);
     }
-    std::cout << "Cat assignment operator" << std::endl;
+    std::cout << "Cat assignment operator called." << std::endl;
     return *this;
 }
 
 Cat::~Cat() {
     delete _brain;
-    std::cout << "Cat destroyed" << std::endl;
+    std::cout << "Cat destructor called." << std::endl;
 }
 
 void Cat::makeSound() const {
