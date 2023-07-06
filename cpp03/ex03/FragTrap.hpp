@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGFTRAP_HPP
+#ifndef FRAGTRAP_HPP
 #define FRAGTRAP_HPP
 
 #include "ClapTrap.hpp"
@@ -21,7 +21,7 @@ public:
     FragTrap(std::string name);
     ~FragTrap();
 
-    void    highFivesGuys(void);
+    void highFivesGuys(void);
 };
 
 #endif
