@@ -15,18 +15,19 @@
 
 #include "AAnimal.hpp"
 
-class Dog : public AAnimal {
+class Dog : public AAnimal
+{
 public:
     Dog();
-    Dog(const Dog& other);
-    Dog& operator=(const Dog& other);
+    Dog(const Dog &other);
+    Dog &operator=(const Dog &other);
     virtual ~Dog();
 
     void makeSound() const;
-    virtual Brain* getBrain() const;
+    virtual Brain *getBrain() const;
 
 protected:
-    Brain* _brain;
+    Brain *_brain;
 };
 
 #endif

@@ -14,19 +14,22 @@
 
 AMateria::AMateria() : _type("default") {}
 
-AMateria::AMateria(const std::string& type) : _type(type) {}
+AMateria::AMateria(const std::string &type) : _type(type) {}
 
-AMateria::AMateria(const AMateria& src) : _type(src._type) {}
+AMateria::AMateria(const AMateria &src) : _type(src._type) {}
 
 AMateria::~AMateria() {}
 
-AMateria& AMateria::operator=(const AMateria& rhs) {
-    if (this != &rhs) {
+AMateria &AMateria::operator=(const AMateria &rhs)
+{
+    if (this != &rhs)
+    {
         _type = rhs._type;
     }
     return *this;
 }
 
-const std::string& AMateria::getType() const {
+const std::string &AMateria::getType() const
+{
     return _type;
 }

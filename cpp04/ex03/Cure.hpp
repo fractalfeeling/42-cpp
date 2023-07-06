@@ -19,12 +19,12 @@ class Cure : public AMateria
 {
 public:
     Cure();
-    Cure(const Cure& src);
+    Cure(const Cure &src);
     ~Cure();
-    Cure& operator=(const Cure& rhs);
+    Cure &operator=(const Cure &rhs);
 
-    AMateria*   clone() const;
-    void        use(ICharacter& target);
+    AMateria *clone() const;
+    void use(ICharacter &target);
 };
 
 #endif

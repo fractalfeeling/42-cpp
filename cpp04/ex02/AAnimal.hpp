@@ -18,15 +18,16 @@
 
 class Brain;
 
-class AAnimal {
+class AAnimal
+{
 public:
-    AAnimal(const AAnimal& other);
-    AAnimal& operator=(const AAnimal& other);
+    AAnimal(const AAnimal &other);
+    AAnimal &operator=(const AAnimal &other);
     virtual ~AAnimal();
 
     std::string getType() const;
     virtual void makeSound() const = 0;
-    virtual Brain* getBrain() const = 0;
+    virtual Brain *getBrain() const = 0;
 
 protected:
     AAnimal();

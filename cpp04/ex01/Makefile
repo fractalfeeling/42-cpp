@@ -12,7 +12,7 @@
 
 NAME    = a.out
 
-CC      = g++
+CC      = c++
 CFLAGS  = -Werror -Wextra -Wall -std=c++98
 
 SRC     = main.cpp Animal.cpp Cat.cpp Dog.cpp Brain.cpp

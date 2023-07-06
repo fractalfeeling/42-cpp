@@ -23,14 +23,14 @@ protected:
 
 public:
     AMateria();
-    AMateria(const std::string& type);
-    AMateria(const AMateria& src);
+    AMateria(const std::string &type);
+    AMateria(const AMateria &src);
     ~AMateria();
-    AMateria& operator=(const AMateria& rhs);
+    AMateria &operator=(const AMateria &rhs);
 
-    const std::string&  getType() const;
-    virtual AMateria*   clone() const = 0;
-    virtual void        use(ICharacter& target);
+    const std::string &getType() const;
+    virtual AMateria *clone() const = 0;
+    virtual void use(ICharacter &target);
 };
 
 #endif
