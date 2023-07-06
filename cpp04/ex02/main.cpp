@@ -36,7 +36,7 @@ int main()
         delete animals[i];
     }
 
-    AAnimal *animal = new AAnimal();
+    // AAnimal *animal = new AAnimal();
 
     return 0;
 }
